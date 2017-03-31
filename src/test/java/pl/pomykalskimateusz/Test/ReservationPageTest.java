@@ -7,6 +7,7 @@ import org.junit.Test;
 import pl.pomykalskimateusz.PageObject.AbstractPage;
 import pl.pomykalskimateusz.PageObject.MainPage;
 import pl.pomykalskimateusz.PageObject.ReservationPage;
+import pl.pomykalskimateusz.PageObject.ReservationSecondPage;
 
 import static pl.pomykalskimateusz.Setup.SeleniumDriver.getDriver;
 public class ReservationPageTest 
@@ -43,7 +44,13 @@ public class ReservationPageTest
 		rp.getFirstClass().click();
 		rp.setAirlines("Pangea Airlines");
 		rp.getContinueButton().click();
-		Thread.sleep(5000);
+		Thread.sleep(2500);
+		
+		ReservationSecondPage rsp = new ReservationSecondPage();
+		rsp.getThirdDepartOption().click();
+		rsp.getSecondReturnOption().click();
+		rsp.getContinueButton().click();
+		Thread.sleep(2500);
 		
 	}
 }
