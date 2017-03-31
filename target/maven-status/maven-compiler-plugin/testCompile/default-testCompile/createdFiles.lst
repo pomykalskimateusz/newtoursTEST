@@ -1,0 +1,17 @@
+pl\pomykalskimateusz\PageObject\ProfilePage.class
+pl\pomykalskimateusz\PageObject\AbstractPage.class
+pl\pomykalskimateusz\Setup\SeleniumDriver.class
+pl\pomykalskimateusz\Test\AccountPageTest.class
+pl\pomykalskimateusz\Test\SignOnPageTest.class
+pl\pomykalskimateusz\PageObject\RegisterPage.class
+pl\pomykalskimateusz\PageObject\ReservationThirdPage.class
+pl\pomykalskimateusz\PageObject\MainPage.class
+pl\pomykalskimateusz\PageObject\AccountPage.class
+pl\pomykalskimateusz\Test\MainPageTest.class
+pl\pomykalskimateusz\Test\ReservationPageTest.class
+pl\pomykalskimateusz\PageObject\ReservationPage.class
+pl\pomykalskimateusz\Test\AppTest.class
+pl\pomykalskimateusz\Test\RegisterPageTest.class
+pl\pomykalskimateusz\PageObject\ReservationSecondPage.class
+pl\pomykalskimateusz\PageObject\SignOnPage.class
+pl\pomykalskimateusz\PageObject\ItineraryPage.class

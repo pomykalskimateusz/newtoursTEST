@@ -16,12 +16,13 @@ public class RegisterPageTest
 	{
 		getDriver().get(URL);
 	}
-	@AfterClass
+/*	@AfterClass
 	public static void tearDown()
 	{
 		getDriver().close();
 		getDriver().quit();
 	}
+*/
 	@Test
 	public void testRegistation() throws InterruptedException
 	{

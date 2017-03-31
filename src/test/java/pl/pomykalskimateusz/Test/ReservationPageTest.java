@@ -8,6 +8,7 @@ import pl.pomykalskimateusz.PageObject.AbstractPage;
 import pl.pomykalskimateusz.PageObject.MainPage;
 import pl.pomykalskimateusz.PageObject.ReservationPage;
 import pl.pomykalskimateusz.PageObject.ReservationSecondPage;
+import pl.pomykalskimateusz.PageObject.ReservationThirdPage;
 
 import static pl.pomykalskimateusz.Setup.SeleniumDriver.getDriver;
 public class ReservationPageTest 
@@ -19,13 +20,13 @@ public class ReservationPageTest
 		getDriver().get(URL);
 	}
 	
-	@AfterClass
+/*	@AfterClass
 	public static void tearDown()
 	{
 		getDriver().close();
 		getDriver().quit();
 	}
-	
+*/	
 	@Test
 	public void testReservation() throws InterruptedException
 	{
@@ -52,5 +53,26 @@ public class ReservationPageTest
 		rsp.getContinueButton().click();
 		Thread.sleep(2500);
 		
+		ReservationThirdPage rtp = new ReservationThirdPage();
+		
+		rtp.setFirstName_1("lukas");
+		rtp.setLastName_1("lukasinski");
+		rtp.setMeal_1("Hindu");
+		
+		rtp.setBillAddress("eloo321", "123oole");
+		rtp.setBillCity("Bicland");
+		rtp.setBillState("Stanowy");
+		rtp.setBillZip("32008");
+		rtp.setBillCountry("UNITED STATES");
+		
+		rtp.setDelAddress("eldsoo321", "1da3oole");
+		rtp.setDelCity("Bicdassssssssssland");
+		rtp.setDelState("Stanowydsa");
+		rtp.setDelZip("32008ds");
+		rtp.setDelCountry("UNITED STATES");
+		
+		//rtp.getTicketLessRadioButton().click();
+		Thread.sleep(2500);
+	//	rtp.getButton().click();
 	}
 }
