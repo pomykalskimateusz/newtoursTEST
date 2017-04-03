@@ -10,3 +10,5 @@ Scenario: Sign on as mati96 and do reservation for 1 person
 		Then I should see third reservation page
 		When I fill in third reservation fields
 		Then I should see flight confirmation
+		When I click back to flights button
+		Then I should see first flight reservation page

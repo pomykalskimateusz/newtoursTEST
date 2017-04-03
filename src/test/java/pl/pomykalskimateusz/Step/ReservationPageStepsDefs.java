@@ -3,6 +3,7 @@ import static pl.pomykalskimateusz.Setup.SeleniumDriver.getDriver;
 
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import pl.pomykalskimateusz.PageObject.ReservationFourthPage;
 import pl.pomykalskimateusz.PageObject.ReservationPage;
 import pl.pomykalskimateusz.PageObject.ReservationSecondPage;
 import pl.pomykalskimateusz.PageObject.ReservationThirdPage;
@@ -69,6 +70,19 @@ public class ReservationPageStepsDefs
 	
 	@Then("^I should see flight confirmation$")
 	public void i_should_see_flight_confirmation()
+	{
+		System.out.println("Page title: "+getDriver().getTitle());
+	}
+	
+	@When("^I click back to flights button$")
+	public void i_click_back_to_flights_button()
+	{
+		ReservationFourthPage rfp = new ReservationFourthPage();
+		rfp.getBackToFlightsButton().click();
+	}
+	
+	@Then("^I should see first flight reservation page$")
+	public void i_should_see_first_flight_reservation_page()
 	{
 		System.out.println("Page title: "+getDriver().getTitle());
 	}
