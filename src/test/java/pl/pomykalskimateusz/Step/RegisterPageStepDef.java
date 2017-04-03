@@ -37,7 +37,6 @@ public class RegisterPageStepDef
 		rp.getRegisterButton().click();
 	}
 	
-	@SuppressWarnings("deprecation")
 	@Then("^I should see thanks for registation$")
 	public void i_should_see_thanks_for_registation()
 	{

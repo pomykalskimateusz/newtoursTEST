@@ -12,6 +12,7 @@ import cucumber.api.java.*;
 import cucumber.api.java.en.*;
 import cucumber.runtime.junit.Assertions;
 import junit.framework.Assert;
+import pl.pomykalskimateusz.PageObject.AccountPage;
 import pl.pomykalskimateusz.PageObject.SignOnPage;
 
 
@@ -48,7 +49,7 @@ public class MainPageStepDefs
 	}
 	
 	@When("^I fill in login fields with \"([^\"]*)\" \"([^\"]*)\"$")
-	public void I_fill_in_login_fields_with(String login, String pass)
+	public void I_fill_in_login_fields_with(String login, String pass) throws Throwable
 	{
 		SignOnPage sop = new SignOnPage();
 		sop.setUserName(login);
@@ -56,8 +57,22 @@ public class MainPageStepDefs
 		sop.getLoginButton().click();
 	}
 	
-	@Then("^I should see flights reservation page$")
-	public void i_should_see_flights_reservation_page()
+	@Then("^I should see flights reservation page$") 
+	public void i_should_see_flights_reservation_page() throws Throwable
+	{
+		System.out.println("Page title: "+getDriver().getTitle());
+	}
+	
+	@When("^I click sign off button$") 
+	public void i_click_sign_off_button() throws Throwable
+	{
+		AccountPage ap = new AccountPage();
+		ap.getSignOffButton().click();
+		System.out.println("KLIKAM PRZYCISK SIGN OFF");
+	}
+	
+	@Then("^I should see main page$") 
+	public void i_should_see_main_page() throws Throwable
 	{
 		System.out.println("Page title: "+getDriver().getTitle());
 	}
