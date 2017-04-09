@@ -31,6 +31,7 @@ public class MainPageTest
 	{
 		MainPage mp = new MainPage();
 		
+		mp.linkSignOn();
 		mp.linkContact();
 		mp.linkSupport();
 		mp.linkRegister();
