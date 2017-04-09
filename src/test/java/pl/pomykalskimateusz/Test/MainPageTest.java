@@ -30,10 +30,10 @@ public class MainPageTest
 	public void testButton()
 	{
 		MainPage mp = new MainPage();
+		
 		mp.linkContact();
 		mp.linkSupport();
 		mp.linkRegister();
-		mp.linkSignOn();
 		
 		mp.linkHome();
 		mp.linkFlights();
